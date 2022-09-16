@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 
 namespace LinqLesson
 {
-    class Program
+    class Program  
     {
         static void Main(string[] args)
         {
@@ -29,23 +29,7 @@ namespace LinqLesson
             var farthestWest = persons.Where(p => p.Longitude == persons.Max(p => p.Longitude)).FirstOrDefault();
             var farthestEast = persons.Where(p => p.Longitude == persons.Min(p => p.Longitude)).FirstOrDefault();
             // 2 Task
-            //var MaxDistanceBetween = persons.SelectMany(p1 => persons.Select(p2 => new { Person1 = p1, Person2 = p2 }))
-            //    .Where(p => p.Person1 != p.Person2)
-            //    .Select(d => new DistanceBetween(d.Person1, d.Person2, (GetDistanceInMiles(d.Person1, d.Person2))))
-            //    .OrderByDescending(d => d.Distance)
-            //    .FirstOrDefault()
-            //    .ToString();
-            //Console.WriteLine($"Maximum distance between\n{MaxDistanceBetween}");
 
-
-
-            //var MinDistanceBetween = persons.SelectMany(p1 => persons.Select(p2 => new { Person1 = p1, Person2 = p2 }))
-            //    .Where(p => p.Person1 != p.Person2)
-            //    .Select(d => new Distancebetween(d.Person1, d.Person2, (GetDistanceInMiles(d.Person1, d.Person2))))
-            //    .OrderBy(d => d.Distance)
-            //    .FirstOrDefault()
-            //    .ToString();
-            //Console.WriteLine($"Minimum distance between\n{MinDistanceBetween}");
             // 3 Task
             var twoPersonWithLongestAbout = persons.OrderByDescending(p => p.About.WordsCount()).Take(2);
 
@@ -70,7 +54,9 @@ namespace LinqLesson
 
         }
 
+
     }
+}
     
 
 
