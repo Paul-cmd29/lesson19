@@ -29,7 +29,7 @@ namespace LinqLesson
             var farthestWest = persons.Where(p => p.Longitude == persons.Max(p => p.Longitude)).FirstOrDefault();
             var farthestEast = persons.Where(p => p.Longitude == persons.Min(p => p.Longitude)).FirstOrDefault();
             // 2 Task
-
+//this task is not completed - find max and min distance between 2 persons
             // 3 Task
             var twoPersonWithLongestAbout = persons.OrderByDescending(p => p.About.WordsCount()).Take(2);
 
@@ -57,6 +57,6 @@ namespace LinqLesson
 
     }
 }
-    
+ //checked   
 
 
